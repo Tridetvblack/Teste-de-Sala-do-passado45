@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sala do Passado</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://i.imgur.com/8U4dOzZ.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 30px;
+      font-size: 3em;
+    }
+    .button {
+      display: block;
+      background-color: black;
+      color: white;
+      padding: 15px;
+      margin: 20px auto;
+      width: 250px;
+      font-size: 1.5em;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .credit {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: black;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .credit img {
+      max-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sala do passado</h1>
+
+  <button class="button" onclick="acao('Redação enviada com sucesso!')">Redação</button>
+  <button class="button" onclick="acao('Tarefa concluída com sucesso!')">Tarefa</button>
+  <button class="button" onclick="acao('Expansão noturna registrada!')">Expansão noturna</button>
+  <button class="button" onclick="acao('Curso Alura finalizado!')">Alura</button>
+
+  <div class="credit">
+    <p>Feito por: Vicszzzzzzzzzzzzzz</p>
+    <img src="https://i.imgur.com/N0zRzXt.png" alt="Power - Chainsaw Man" />
+  </div>
+
+  <script>
+    function acao(msg) {
+      const ra = prompt("Digite seu RA:");
+      const senha = prompt("Digite sua senha:");
+      if (!ra || !senha) {
+        alert("Preencha o RA e a senha para continuar.");
+        return;
+      }
+      setTimeout(() => alert(msg), 1000);
+    }
+  </script>
+</body>
+</html>
